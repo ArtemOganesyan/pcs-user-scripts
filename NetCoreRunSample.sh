@@ -23,8 +23,6 @@ mkdir /var/netcore/source
 cd /var/netcore/source
 git clone https://github.com/ArtemOganesyan/pcs-webapp-main.git
 cd /var/netcore/source/pcs-webapp-main/MainWebApp
-dotnet run &
-
-# mkdir /var/netcore/deployment
-# dotnet publish -c Release -o /var/netcore/deployment
-# /var/netcore/deployment/MainWebApp
+mkdir /var/netcore/deployment
+sudo dotnet publish -c Release -o /var/netcore/deployment
+nohup /var/netcore/deployment/MainWebApp
